@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> Agribusiness</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+  <header id="hero" role="banner">
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <!-- Branding -->
+    <div class="hero-branding">
+      <img src="images/logo.png" alt="New Age Agribusiness logo">
+      <p class="tagline">From Nakuru’s fields to the world</p>
+    </div>
+
+    <!-- Slide Container -->
+    <div class="hero-slides">
+      <div class="slide active">
+        <h1>Empowering Sustainable Agribusiness</h1>
+        <p>Innovative farming solutions rooted in Nakuru, Kenya</p>
+      </div>
+      <div class="slide">
+        <h1>Expert Consultancy</h1>
+        <p>We guide you from seed to market with proven strategies.</p>
+      </div>
+      <div class="slide">
+        <h1>Global Export</h1>
+        <p>Connecting Kenyan produce to international markets.</p>
+      </div>
+    </div>
+
+    <!-- Call to Action -->
+    <button class="cta" onclick="scrollToSection('about')">
+      Learn More
+    </button>
+
+    <!-- Slide Controls -->
+    <div class="slide-controls">
+      <button class="dot active" data-index="0"></button>
+      <button class="dot" data-index="1"></button>
+      <button class="dot" data-index="2"></button>
+    </div>
+  </div>
+
+  <!-- Scroll Arrow -->
+  <div class="scroll-arrow" aria-hidden="true">
+    <span></span><span></span><span></span>
+  </div>
+</header>
+
+
+
+
+  <main>
+    <section id="about" class="about-section fade-in">
+  <div class="about-content">
+    <div class="text-content">
+      <h2>Rooted in Innovation, Growing Sustainably</h2>
+      <p>
+        At <strong>New Age Agribusiness</strong>, based in Nakuru, Kenya, we are committed to pioneering sustainable farming practices that harmonize with nature. Our mission is to empower communities through innovative agricultural solutions, ensuring food security and environmental stewardship for generations to come.
+      </p>
+      <p>
+        By integrating modern technology with traditional knowledge, we cultivate not just crops, but also resilient ecosystems and thriving communities.
+      </p>
+      <a href="#services" class="cta-button">Explore Our Services</a>
+    </div>
+    <div class="image-content">
+      <img src="images/im1.jpg" alt="Lush green farm landscape in Nakuru" loading="lazy" />
+    </div>
+  </div>
+</section>
+	
+	
+	
+	
+    <section id="services" class="fade-in-section">
+  <div class="services-header fade-in">
+    <h2>What We Offer</h2>
+    <p>Empowering agribusiness with sustainable solutions and expert services.</p>
+  </div>
+
+  <div class="services-wrapper">
+    <!-- Produce Supply -->
+    <div class="service-card fade-in slide-up delay-1">
+      <div class="card-inner">
+        <div class="card-front">
+          <div class="icon-wrap">
+            <svg viewBox="0 0 64 64"><path d="M4 32h56M4 44h56" stroke="#4E6F43" stroke-width="3" fill="none"/></svg>
+          </div>
+          <h3>Produce Supply</h3>
+          <p>Reliable delivery of farm-fresh, quality produce to your doorstep or market.</p>
+        </div>
+        <div class="card-back">
+          <h4>More About Produce Supply</h4>
+          <p>We ensure seamless farm-to-market logistics with traceability and freshness guaranteed, ideal for both retail and wholesale needs.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Value Addition -->
+    <div class="service-card fade-in slide-up delay-2">
+      <div class="card-inner">
+        <div class="card-front">
+          <div class="icon-wrap">
+            <svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="28" stroke="#B2CB91" stroke-width="3" fill="none"/></svg>
+          </div>
+          <h3>Value Addition</h3>
+          <p>Transforming raw produce into higher-value goods for better returns and impact.</p>
+        </div>
+        <div class="card-back">
+          <h4>More About Value Addition</h4>
+          <p>We add shelf life and market appeal through dehydration, packaging, and branding of raw agricultural goods.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Processing -->
+    <div class="service-card fade-in slide-up delay-3">
+      <div class="card-inner">
+        <div class="card-front">
+          <div class="icon-wrap">
+            <svg viewBox="0 0 64 64"><path d="M2 62L62 2" stroke="#836539" stroke-width="3"/></svg>
+          </div>
+          <h3>Processing</h3>
+          <p>Modern processing units that ensure food safety, nutrition, and scalability.</p>
+        </div>
+        <div class="card-back">
+          <h4>More About Processing</h4>
+          <p>We process with certified machines to uphold food safety standards and scale production efficiently for local and export markets.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Trainings -->
+    <div class="service-card fade-in slide-up delay-4">
+      <div class="card-inner">
+        <div class="card-front">
+          <div class="icon-wrap">
+            <svg viewBox="0 0 64 64"><rect x="10" y="10" width="44" height="44" stroke="#6FA8DC" stroke-width="3" fill="none"/></svg>
+          </div>
+          <h3>Trainings</h3>
+          <p>Hands-on, practical training for farmers, youth, and agri-entrepreneurs.</p>
+        </div>
+        <div class="card-back">
+          <h4>More About Trainings</h4>
+          <p>Our training programs focus on sustainability, agritech, and entrepreneurial skills to foster innovation in agriculture.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <section id="products" class="fade-in">
+  <h2>Our Products</h2>
+
+  <div class="scroll-controls">
+    <button class="scroll-btn left">&#10094;</button>
+    <div class="products-scroll" id="scrollContainer">
+      <!-- Your product cards -->
+      <div class="product-card"><img src="images/im2.jpg" alt="Markies"><h3>Markies</h3><p>Perfect for boiling and frying with rich texture.</p></div>
+      <div class="product-card"><img src="images/im4.jpg" alt="Sherekea"><h3>Sherekea</h3><p>Known for rich taste and smooth texture.</p></div>
+      <div class="product-card"><img src="images/im3.jpg" alt="Shangi"><h3>Shangi</h3><p>Resistant to diseases with excellent flavor.</p></div>
+      <div class="product-card"><img src="images/im5.jpg" alt="Unica"><h3>Unica</h3><p>Versatile potato great for many dishes.</p></div>
+      <div class="product-card"><img src="images/im1.jpg" alt="Red Onions"><h3>Red Onions</h3><p>Fresh and flavorful, perfect for any recipe.</p></div>
+      <div class="product-card"><img src="images/im4.jpg" alt="Capsicum"><h3>Capsicum</h3><p>Crisp, colorful, and locally sourced.</p></div>
+    </div>
+    <button class="scroll-btn right">&#10095;</button>
+  </div>
+</section>
+
+
+
+    <section id="gallery" class="fade-in">
+  <h2>Gallery</h2>
+  <div class="gallery-grid">
+    <div class="item"><img src="images/im1.jpg" alt="Farm Image"></div>
+    <div class="item"><img src="images/im2.jpg" alt="Harvest"></div>
+    <div class="item"><img src="images/im3.jpg" alt="Field"></div>
+    <div class="item"><img src="images/im4.jpg" alt="Market"></div>
+  </div>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="hidden">
+    <button class="close" aria-label="Close">&times;</button>
+    <button class="nav prev" aria-label="Previous">&#10094;</button>
+    <img id="lightbox-img" src="" alt="">
+    <button class="nav next" aria-label="Next">&#10095;</button>
+  </div>
+</section>
+
+
+    <section id="contact" class="fade-in">
+  <h2>Contact Us</h2>
+
+  <div class="contact-cards">
+    <div class="info-card">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" fill="currentColor"/></svg>
+      <div>
+        <h3>Address</h3>
+        <p>123 Nakuru Road<br/>Nakuru, Kenya</p>
+      </div>
+    </div>
+
+    <div class="info-card">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.27 11.36 11.36 0 003.58.57 1 1 0 011 1v3.5a1 1 0 01-1 1A16 16 0 013 5a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.58 1 1 0 01-.27 1.11l-2.18 2.1z" fill="currentColor"/></svg>
+      <div>
+        <h3>Phone</h3>
+        <p><a href="tel:+254700123456">+254 700 123 456</a></p>
+      </div>
+    </div>
+
+    <div class="info-card">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 2l-8 5L4 6h16zm0 12H4V8l8 5 8-5v10z" fill="currentColor"/></svg>
+      <div>
+        <h3>Email</h3>
+        <p><a href="mailto:info@newageagribusiness.co.ke">info@newageagribusiness.co.ke</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  </main>
+  
+  
+  <footer id="footer">
+  <div class="footer-container">
+    <!-- About / Logo -->
+    <div class="footer-about">
+      <img src="images/logo-white.svg" alt="New Age Agribusiness Logo" class="footer-logo">
+      <p>New Age Agribusiness pioneers sustainable farming in Nakuru, Kenya, delivering quality produce and expert services worldwide.</p>
+    </div>
+
+    <!-- Quick Navigation -->
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Social Media -->
+    <div class="footer-social">
+      <h4>Follow Us</h4>
+      <div class="social-links">
+        <a href="#" aria-label="Facebook">Facebook</a>
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="#" aria-label="Twitter">Twitter</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 New Age Agribusiness • Nakuru, Kenya</p>
+  </div>
+</footer>
+  
+  
+  <button id="scrollTop" aria-label="Scroll to top">▲</button>
+
+  
+  
+  <script src="script.js"></script>
+  
+</body>
+</html>

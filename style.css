@@ -845,7 +845,8 @@ body {
   transition: color 0.2s ease;
 }
 #footer .footer-links a:hover {
-  color: #6FA8DC; /* Accent Blue */
+  color: #6FA8DC; 
+  font-size: 1.1rem;
 }
 
 /* Social Links */

@@ -45,25 +45,26 @@ document.addEventListener('DOMContentLoaded', () => {
   highlightActiveLink(); // Run on load in case user is not at the top
 
   // Mobile menu toggle
-  const menuToggle = document.getElementById('menu-toggle');
-  const navLinksContainer = document.querySelector('.nav-links');
+const menuToggle = document.querySelector('.hamburger');
+const navLinksContainer = document.querySelector('.nav-links');
 
-  menuToggle.addEventListener('click', () => {
-    navLinksContainer.classList.toggle('open');
-    menuToggle.classList.toggle('open');
-  });
+menuToggle.addEventListener('click', (e) => {
+  e.stopPropagation(); // prevent body click from firing
+  navLinksContainer.classList.toggle('open');
+  menuToggle.classList.toggle('open');
+});
 
-  // Close mobile nav when clicking outside
-  document.addEventListener('click', (e) => {
-    if (
-      navLinksContainer.classList.contains('open') &&
-      !navLinksContainer.contains(e.target) &&
-      !menuToggle.contains(e.target)
-    ) {
-      navLinksContainer.classList.remove('open');
-      menuToggle.classList.remove('open');
-    }
-  });
+  // Close menu on outside click
+document.addEventListener('click', (e) => {
+  if (
+    navLinksContainer.classList.contains('open') &&
+    !navLinksContainer.contains(e.target) &&
+    !menuToggle.contains(e.target)
+  ) {
+    navLinksContainer.classList.remove('open');
+    menuToggle.classList.remove('open');
+  }
+});
 
   // Close mobile nav on link click (optional)
   navLinks.forEach(link => {

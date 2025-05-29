@@ -20,6 +20,96 @@ body {
 	}
 
 
+
+
+/* === Navbar === */
+#navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #4E6F43;
+  z-index: 1000;
+  padding: 0.75rem 1.5rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo {
+  display: inline-block;
+  height: 48px; 
+}
+
+.logo img {
+  height: 100%;
+  width: auto;
+  display: block;
+}
+
+
+.nav-links {
+  display: flex;
+  gap: 1.25rem;
+  list-style: none;
+  margin: 0;
+}
+
+.nav-links a {
+  font-family: 'Open Sans', sans-serif;
+  color: #F5F5F0;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+  color: #f1ac43;
+}
+
+/* Hamburger styles */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.75rem;
+  color: #F5F5F0;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    width: 100%;
+    flex-direction: column;
+    background: #4E6F43;
+    display: none;
+    margin-top: 1rem;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+
+
+
+
+
+
+
 /* ==== Hero Base ==== */
 #hero {
   position: relative;
@@ -58,7 +148,10 @@ body {
   width: 100px; max-width: 25vw; /* scales on small screens */
 }
 .tagline {
-  margin-top:0.5rem; font-size:1rem; opacity:0.9;
+
+   
+  font-size:1.5rem; 
+  opacity:0.9;
 }
 
 /* ==== Slides ==== */

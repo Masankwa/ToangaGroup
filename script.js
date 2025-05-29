@@ -1,4 +1,85 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // Smooth scroll-to-top button
+  const scrollBtn = document.getElementById('scrollTop');
+  window.addEventListener('scroll', () => {
+    scrollBtn.classList.toggle('visible', window.scrollY > 400);
+  });
+  scrollBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // Scroll-triggered fade-ins
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  // Active nav link on scroll
+  const sections = document.querySelectorAll('header, section');
+  const navLinks = document.querySelectorAll('.nav-links a');
+
+  function highlightActiveLink() {
+    const scrollY = window.scrollY;
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.offsetHeight;
+      const sectionId = section.getAttribute('id');
+
+      if (scrollY >= sectionTop - 100 && scrollY < sectionTop + sectionHeight - 100) {
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === `#${sectionId}`) {
+            link.classList.add('active');
+          }
+        });
+      }
+    });
+  }
+
+  window.addEventListener('scroll', highlightActiveLink);
+  highlightActiveLink(); // Run on load in case user is not at the top
+
+  // Mobile menu toggle
+  const menuToggle = document.getElementById('menu-toggle');
+  const navLinksContainer = document.querySelector('.nav-links');
+
+  menuToggle.addEventListener('click', () => {
+    navLinksContainer.classList.toggle('open');
+    menuToggle.classList.toggle('open');
+  });
+
+  // Close mobile nav when clicking outside
+  document.addEventListener('click', (e) => {
+    if (
+      navLinksContainer.classList.contains('open') &&
+      !navLinksContainer.contains(e.target) &&
+      !menuToggle.contains(e.target)
+    ) {
+      navLinksContainer.classList.remove('open');
+      menuToggle.classList.remove('open');
+    }
+  });
+
+  // Close mobile nav on link click (optional)
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      navLinksContainer.classList.remove('open');
+      menuToggle.classList.remove('open');
+    });
+  });
+});
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
   const slides = document.querySelectorAll('.slide');
   const dots   = document.querySelectorAll('.dot');
   let current  = 0, timer;

@@ -86,9 +86,21 @@ body {
   box-shadow: none;
 }
 .hamburger:focus {
-  outline: none;
-  box-shadow: none;
+  outline: none !important;
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  -webkit-tap-highlight-color: transparent; /* For mobile devices */
 }
+
+.hamburger::-moz-focus-inner {
+  border: 0;
+}
+
+.hamburger:focus-visible {
+  outline: none;
+}
+
 
 
 

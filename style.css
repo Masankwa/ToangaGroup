@@ -991,6 +991,19 @@ body {
   padding-top: 1rem;
   color: rgba(245,245,240,0.7);
 }
+/* Style for the "Site developed by" footer text */
+.footer-developed {
+  text-align: center; 
+  font-size: 0.875rem; 
+  color: #F5F5F0; 
+  margin: 0.5rem 0; 
+  font-family: 'Open Sans', sans-serif; 
+}
+
+.footer-developed span {
+  font-weight: 600; 
+  color: #f1ac43; 
+}
 
 /* Responsive adjustments */
 @media (max-width: 768px) {

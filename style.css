@@ -1008,11 +1008,14 @@ body {
   font-family: 'Open Sans', sans-serif; 
 }
 
-.footer-developed span {
+.footer-developed span a{
   font-weight: 600; 
   color: #f1ac43; 
+  text-decoration: none;
 }
-
+.footer-developed span a:hover{
+ color:rgba(245,245,240,0.7);
+}
 /* Responsive adjustments */
 @media (max-width: 768px) {
   #footer .footer-container {
